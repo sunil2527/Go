@@ -1,11 +1,11 @@
 VERSION := v3.0
-IMG := opstree/empms-attendance:$(VERSION)
+IMG := opstree/empms-employee:$(VERSION)
 
 build:
 	go build
 
-build-image:
+image:
 	docker build -t ${IMG} -f Dockerfile .
 
-push-image:
+push:
 	docker push ${IMG}
